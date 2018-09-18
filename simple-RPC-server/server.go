@@ -12,13 +12,13 @@ import (
 
 type MyArith struct{}
 
-func (t MyArith) Multiply(args *shared.Args, reply *int) error {
+func (t MyArith) Multiply(args shared.Args, reply *int) error {
 	*reply = args.A * args.B
 	fmt.Println("Executing Multiply")
 	return nil
 }
 
-func (t MyArith) Divide(args *shared.Args, quo *shared.Quotient) error {
+func (t MyArith) Divide(args shared.Args, quo *shared.Quotient) error {
 	if args.B == 0 {
 		return errors.New("divide by zero")
 	}
