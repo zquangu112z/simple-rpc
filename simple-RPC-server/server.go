@@ -28,6 +28,12 @@ func (t MyArith) Divide(args shared.Args, quo *shared.Quotient) error {
 	return nil
 }
 
+func (t MyArith) Greet(guessname string, greeting *string) error {
+	fmt.Println("Executing Greet")
+	*greeting = "Hello " + guessname
+	return nil
+}
+
 func registerArith(server *rpc.Server, arith shared.Arith) {
 	// registers Arith interface by name of `Arithmetic`.
 	// If you want this name to be same as the type name, you
