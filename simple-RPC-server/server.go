@@ -7,7 +7,7 @@ import (
 	"net"
 	"net/rpc"
 
-	shared "github.com/zquangu112z/simple-RPC/simple-RPC-shared-struct"
+	shared "github.com/zquangu112z/simple-rpc/simple-RPC-shared-struct"
 )
 
 type MyArith struct{}
